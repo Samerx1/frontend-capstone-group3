@@ -1,0 +1,60 @@
+/*
+  Header — Figma specs:
+  width: 1440px, height: 100px
+  background: #051540
+  border-bottom: 0.5px solid (subtle)
+*/
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: #051540;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*
+  Logo — Figma specs:
+  width: 121px, height: 52px
+  left: 119px, top: 27px
+*/
+.header-logo {
+  position: absolute;
+  left: 119px;
+  top: 27px;
+}
+
+.header-logo-img {
+  width: 121px;
+  height: 52px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Responsive: on smaller screens shift logo left padding */
+@media (max-width: 1024px) {
+  .header-logo {
+    left: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-logo {
+    left: 20px;
+    top: 24px;
+  }
+
+  .header-logo-img {
+    width: 90px;
+    height: auto;
+  }
+}
